@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+
+  "name": "Urdu News Paper Recommender",
+  "permissions": [
+    "storage"
+  ],
+  "description": "Capture News Links from dunyanews, express and jang",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  
+  "background":{
+  
+  "scripts": ["background.js"]
+  },
+  
+ 
+ "icons" : {
+  
+  "64" : "icon.png"
+  
+  },
+  
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["jquery-3.1.1.min.js", "content.js"]
+    }
+  ]
+  
+        //"http://urdu.dunyanews.tv/", "http://e.jang.com.pk/", "http://www.express.com.pk/epaper/"],
+ }
